@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nature is Happiness" />
+<meta name="keywords" content="nature, happy, happiness, trees, forest, water, lakes, wildlife, tranquility, waterfalls, sunsets, northern lights, aurora borealis, beach, stones, mountains" />
+<link rel="stylesheet" href="css/index.css" media="screen"/>
+<link rel="stylesheet" href="css/print.css" media="print"/>
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Crushed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Over+the+Rainbow" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" rel="stylesheet">
+
+<title>Nature is Happiness</title>
+</head>
+
+<body style="background-image: url('media/tree-background.jpg');">
+
+<header id="main">
+    <h1>Nature is Happiness</h1>
+    <span style="font-size:40px;cursor:pointer;color:#262626;" onclick="openNav()">&#9776;</span> 
+    <h2>"Nothing makes me so happy as to observe nature and to paint what I see." - Henri Rousseau</h2>  
+</header>
+
+<nav id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8606;</a>
+    <a href="#">Lakes</a>
+    <a href="#">Trees</a>
+    <a href="#">Sunsets</a>
+    <a href="#">Mountains</a>
+    <a href="#">Aurora Borealis</a>
+    <img src="media/splash.png" style="background-size:cover; max-width:100%;" alt="water splash">
+</nav>
+
+<section>
+    <div style="margin-bottom: 1%;margin-top:1%;">
+        <button type="button" id="back" onclick="changeImage(-1)">BACK</button>
+        <button type="button" id="next" onclick="changeImage(1)">NEXT</button>
+    </div>
+    <div style="width:60%;">
+        <img alt="happy nature slideshow" id="myImages" src="media/mountain-reflection.jpg" style="max-width:100%; max-height:auto;padding:2%;background:#84bf04;">
+    </div>
+</section>
+
+<article>
+    <p style="margin:3%;">
+        <img src="media/bonfire.jpg" style="width:100%;height:auto;margin:3%;padding:2%;background:#4a8bb2;" alt="bonfire">
+    </p>
+    <p style="margin:3%;">
+        <img src="media/beach-stones.jpg" style="width:100%;height:auto;margin:3%;padding:2%;background:#caf272;" alt="beach stones">
+    </p>
+    <p style="margin:3%;">
+        <img src="media/palm-sunset.jpg" style="width:100%;height:auto;margin:3%;padding:2%;background:#023c4c;" alt="palm tree sunset">
+    </p>
+</article>
+
+<script>
+    function openNav(){
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+        
+    function closeNav(){
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    var Image = new Array("media/mountain-reflection.jpg", "media/forest-light.jpg", "media/aurora-happy.jpg", "media/tree-sunset.jpg", "media/mountain-lake.jpg", "media/beach-palm.jpg", "media/rainbow-trees.jpg", "media/pink-dock-sunset.jpg", "media/aurora-mountain.jpg", "media/waterfall.jpg", "media/butterflies.jpg", "media/forest-path.jpg");
+    var ImageNum=0;
+    var ImageLength=Image.length - 1;
+    function changeImage(number){
+        ImageNum = ImageNum + number;
+        if (ImageNum > ImageLength)
+            ImageNum=0;
+        if (ImageNum < 0)
+            ImageNum=ImageLength;
+    
+    document.getElementById("myImages").src = Image[ImageNum];
+    return;
+    }
+</script>
+
+<footer>
+    <div class="icon-bar">
+        <p>
+        <a href="https://www.facebook.com/EarthsBeautyPage/"><i class="fab fa-facebook-square"></i></a> 
+        <a href="https://www.instagram.com/michigannature/"><i class="fab fa-instagram"></i></a> 
+        <a href="https://www.pexels.com/search/nature/"><i class="fas fa-leaf"></i></a>
+        </p>
+        <p style="text-align:right;margin-right:1%;">&copy;Lauren Lempe</p>
+        </div>
+</footer>
+
+</body>
+
+</html>

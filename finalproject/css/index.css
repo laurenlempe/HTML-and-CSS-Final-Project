@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Calibri, sans-serif;
+    color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    flex: 1;
+    padding-left: 3%;
+}
+h1{
+    font-family: "Julius Sans One", Verdana, sans-serif;
+    font-size: 13vh;
+    color: #84bf04;
+    text-shadow: 3px 3px #405927;
+    letter-spacing: 1vw;
+    font-weight: 900;
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+.sidenav{
+    flex: 1;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #262626;
+    overflow-x: hidden;
+    transition: 1s;
+}
+.sidenav a{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Crushed, sans-serif;
+    color: #0396a6;
+    display: block;
+    transition: 0.3s;
+    padding: 25px 10px 15px 20px;
+}
+.sidenav a:hover{
+    color: #79eaf9;
+}
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main{
+    transition: margin-left .5s;
+}
+h2{
+    font-family: 'Over the Rainbow', cursive, sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #262626;
+    text-shadow: 1px 1px #0396a6;
+    margin-top: 0;
+    margin-left: 1%;
+}
+button{
+    font-family: 'Shadows Into Light Two', sans-serif;
+    font-weight: bolder;
+    font-size: 2.5vh;
+    color: #84bf04;
+    text-shadow: 1px 1px #262626;
+	text-align: center;
+	padding: 7px;
+    box-shadow: 2px 2px #262626;
+    background-color: #023c4c;
+}
+button:hover{
+	background-color:#caf272;
+	color:#0396a6;
+	box-shadow:2px 2px #405927;	
+}
+article{
+    display: inline-flex;
+}
+section{
+    margin-left: 10%;
+}
+footer{
+    color: #84bf04;
+    text-shadow: 1px 1px #023c4c;
+    font-family: 'Shadows Into Light Two', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    width: 100%;
+    background-color: #4a8bb2;
+    opacity: .6;
+}
+.icon-bar{
+	width: 100%;
+    overflow: auto;
+    text-align: center;
+}
+.icon-bar a{
+	float: left;
+	width: 33%;
+	transition: all 0.3s ease;
+	color: #262626;
+    font-size: 4vw;
+}
+.icon-bar a:hover{
+	color: #84bf04;
+}
